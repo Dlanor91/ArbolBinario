@@ -171,5 +171,19 @@ public class AB {
         return clon;
     }
 
+    public int sumaElementosEnHojas(){
+        return sumaElementosEnHojas(raiz);
+    }
+
+    private int sumaElementosEnHojas(Nodo nodo) {
+        if(nodo== null){
+           return 0;
+        }else if(nodo.getIzq()==null && nodo.getDer()==null){
+            return nodo.getDato();
+        }else{
+            return sumaElementosEnHojas(nodo.getIzq())+sumaElementosEnHojas(nodo.getDer());
+        }
+    }
+
 
 }

@@ -5,10 +5,10 @@ import ab.Nodo;
 
 public class Main {
     public static void main(String[] args) { //creo con psvm y ahi el intelligent identifica como proyecto de inicio
-        Nodo subIzqDer = new Nodo(5,new Nodo(6),new Nodo(3));// seria un sub nodo
-        Nodo subIzq = new Nodo(10,null,null);// seria un sub nodo
-        Nodo subDer = new Nodo(1,null,null);
-        Nodo raiz = new Nodo(8,subIzq,subDer);
+        //Nodo subIzqDer = new Nodo(9,new Nodo(6),new Nodo(3));// seria un sub nodo
+        Nodo subIzq = new Nodo(3,null,null);// seria un sub nodo
+        Nodo subDer = new Nodo(12,new Nodo(9),new Nodo(1));
+        Nodo raiz = new Nodo(5,subIzq,subDer);
 
         //Nodo subIzqDer2 = new Nodo(5,new Nodo(6),new Nodo(3));// seria un sub nodo
         Nodo subIzqDer2 = new Nodo(5,new Nodo(6),new Nodo(3));// seria un sub nodo
@@ -39,6 +39,8 @@ public class Main {
 
         System.out.println("ab.clon() true = "+ab.clon());
         System.out.println("ab.espejo() true = "+ab.espejo());
+
+        System.out.println("La suma de elementos es 13: " + ab.sumaElementosEnHojas());
 
     }
 }
